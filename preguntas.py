@@ -126,7 +126,7 @@ def pregunta_03():
     # parámetros. Use cv = 5, y como métrica de evaluación el valor negativo del
     # error cuadrático medio.
     gridSearchCV = GridSearchCV(
-        estimator= LinearRegression(),
+        estimator= pipeline,
         param_grid=param_grid,
         cv= 5,
         scoring= 'neg_mean_squared_error',
