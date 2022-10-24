@@ -119,7 +119,7 @@ def pregunta_03():
     # Defina un diccionario de parámetros para el GridSearchCV. Se deben
     # considerar valores desde 1 hasta 11 regresores para el modelo
     param_grid = {
-        'pca_n_components': np.linspace(1,11,11),
+        'selectKBest_k': np.arange(1,11,1),
     }
 
     # Defina una instancia de GridSearchCV con el pipeline y el diccionario de
@@ -131,7 +131,7 @@ def pregunta_03():
         cv= 5,
         scoring= 'neg_mean_squared_error',
         refit= True,
-        return_train_score=False,
+        return_train_score=True,
     )
 
     # Búsque la mejor combinación de regresores
