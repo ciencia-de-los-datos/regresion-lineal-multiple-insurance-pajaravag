@@ -25,7 +25,7 @@ def pregunta_01():
     )
 
     # Asigne la columna `charges` a la variable `y`.
-    y = df[['charges']]
+    y = df.charges
 
     # Asigne una copia del dataframe `df` a la variable `X`.
     X = df.copy()
