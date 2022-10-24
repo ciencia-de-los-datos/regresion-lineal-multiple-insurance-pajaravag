@@ -84,6 +84,7 @@ def pregunta_03():
     from sklearn.pipeline import Pipeline
     from sklearn.preprocessing import OneHotEncoder
     import numpy as np
+
     pipeline = Pipeline(
         steps=[
             # Paso 1: Construya un column_transformer que aplica OneHotEncoder a las
@@ -119,7 +120,7 @@ def pregunta_03():
     # Defina un diccionario de parámetros para el GridSearchCV. Se deben
     # considerar valores desde 1 hasta 11 regresores para el modelo
     param_grid = {
-        'selectKBest_k': np.arange(1,11,1),
+        'selectKBest_k': range(1,12),
     }
 
     # Defina una instancia de GridSearchCV con el pipeline y el diccionario de
